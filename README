@@ -1,0 +1,22 @@
+# etl-app
+
+Tool to consume json incidents and output them in a specified sort order in CSV format
+
+## Como compilar
+
+To build the app just run `make build` then the binary will be in `build/`
+
+## Tests & coverage
+
+To run get tests just run `make test` or to get tests with coverage run `make coverage`
+
+## Expected variables
+
+| Variables       |  Command && Shortcut            |                Description                |
+| --------------- | :--------------------:          | :---------------------------------------: |
+| sortdirection            | -sortdirection        | sort incidents by direction command line argument value must be one of "ascending, descending" |
+
+## Run the app
+
+To run the app make `./build/etl-app` if you want to send commands then make `./build/etl-app -variablename=value` the `-` is mandatory
+If you wan to send more than 1 variable must be separete with whitespace then `-` for example `./build/etl-app -sortdirection=ascending`
